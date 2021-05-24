@@ -92,7 +92,7 @@ const Formulario = ({ atual }) => {
               label="Lembrar me"
             />
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               color="primary"
