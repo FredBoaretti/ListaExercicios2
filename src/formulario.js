@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import companyLogo from "./image/logo.png"; 
+import clsx from 'clsx';
 
 function Copyright() {
   return (
@@ -26,6 +27,10 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  gradiente: {
+    background: localStorage.getItem("colorB"),
+    color: localStorage.getItem("colorS"),
+  },
   root: {
     height: '100vh',
   },
@@ -96,7 +101,7 @@ const Formulario = ({ atual }) => {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
+              className={clsx(classes.gradiente, classes.submit)}
             >
               Entrar
             </Button>
@@ -105,7 +110,7 @@ const Formulario = ({ atual }) => {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
+              className={clsx(classes.gradiente, classes.submit)}
               onClick={ atual }
             >
               Mudar tema

@@ -19,10 +19,19 @@ const App = () => {
         setClaro( !claro )
     }
 
-    if (claro)
+    if (claro){
         localStorage.setItem("back",'url('+ NGrey+')')
-    else   
+        localStorage.setItem("colorB", 'linear-gradient(45deg, #A9A9A9 5%, #000080 90%)')
+        localStorage.setItem("colarS", 'white')
+    }
+    else{
         localStorage.setItem("back",'url('+ NBlue+')')
+        localStorage.setItem("colorB", 'linear-gradient(45deg, #4F4F4F 5%, #D3D3D3 90%)')
+        localStorage.setItem("colarS", 'black')
+    }
+
+    
+
 
     return (
         <ThemeProvider theme={ atual }>
